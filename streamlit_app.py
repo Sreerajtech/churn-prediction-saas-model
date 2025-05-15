@@ -76,6 +76,25 @@ st.markdown("---")
 st.header("Batch Prediction from CSV")
 uploaded = st.file_uploader("Upload a CSV with: tenure, MonthlyCharges, Contract, OnlineSecurity, PaymentMethod", type="csv")
 
+if uploaded is not None:
+    try:
+        df = pd.read_csv(uploaded)
+        required_cols = ["tenure", "MonthlyCharges", "Contract", "OnlineSecurity", "PaymentMethod", "CLV"]
+        if all(col in df.columns for col in required_cols):
+            df = df[required_cols]
+            preds = model.predict_proba(df)[:, 1]
+            df["Churn_Probability"] = preds
+            st.success("Prediction complete.")
+            st.dataframe(df)
+            st.download_button("Download Results", df.to_csv(index=False), file_name="churn_predictions.csv")
+        else:
+            st.error(f"Missing required columns. Expected: {required_cols}")
+    except Exception as e:
+        st.error(f"Error processing file: {e}")
+else:
+    st.info("Please upload a valid CSV file to run batch predictions.")
+
+
 if uploaded:
     try:
         df = pd.read_csv(uploaded)
