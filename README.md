@@ -26,18 +26,20 @@ This project presents an end-to-end machine learning pipeline to predict custome
 - SHAP, SMOTEENN
 - Streamlit
 
-🚀 Live Project: Customer Churn Prediction (SaaS Model)
-👉 Launch the App
+
+
+## 🚀 Live Project: Customer Churn Prediction (SaaS Model)
+
+👉 **[Launch the App](https://churn-prediction-saas-model-n8pdbp5vqdaztpg5u7mgdy.streamlit.app/)**
 
 Use this app to:
 
-Predict the churn probability for individual customers based on contract and billing details
+* Predict the churn probability for individual customers based on contract and billing details
+* Upload a CSV file for batch churn risk scoring
+* See results instantly and download them for further action
 
-Upload a CSV file for batch churn risk scoring
+Note: use the cleaned version of the csv file 
 
-See results instantly and download them for further action
-
-> Note: The app allows both single-customer prediction and CSV batch processing.
 
 ## 🛠 Run Locally
 
