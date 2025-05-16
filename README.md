@@ -30,7 +30,7 @@ This project presents an end-to-end machine learning pipeline to predict custome
 
 ## 🚀 Live Project: Customer Churn Prediction (SaaS Model)
 
-👉 **[Launch the App](https://churn-prediction-saas-model-n8pdbp5vqdaztpg5u7mgdy.streamlit.app/)**
+👉 **[Launch the App]((https://churn-prediction-saas-model-mumkwp86yanxpnqeh7mwkv.streamlit.app/))**
 
 Use this app to:
 
